@@ -1,0 +1,19 @@
+<div id="liveReport">
+	<!-- MODIFICA QUESTE LINEE-->
+SINGLE TEMPLATE STANDARD; <h1>Prodotti</h1>
+{if $instances != null || $instance != null}
+<ul>
+<li>id: {$instance->id}</li>
+<li>item_name: {$instance->item_name}</li>
+<li>tag: {$instance->tag}</li>
+<li>price: {$instance->price}</li>
+<li>id_categoriaristorante: {$instance->id_categoriaristorante->presentation}</li>
+</ul>
+{else}
+<h1>NON CI SONO Prodotti</h1>
+{/if}
+
+<!-- MODIFICA QUESTE LINEE-->
+
+</div>
+

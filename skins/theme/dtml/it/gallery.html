@@ -1,0 +1,36 @@
+<div id="liveReport">
+
+{if $instances != null || $instance != null}
+
+<div class="row section s4" id="s4" style="margin-left: 80px;margin-right: 80px;;">
+
+
+	<h2>PHOTO GALLERY / <strong>FOTOGRAFIE</strong></h2>
+	
+	<div class="gallery" >
+	{foreach from=$instances item=instance}
+	{if $instance->titolo eq "GALLERIA"}
+		<div class="slide" >
+		
+		
+		
+		<img src="data:{$instance->foto->filetype};base64,
+		{$instance->foto->data}" title="{$instance->sottotitolo}">
+				
+		
+		</div>
+		{else}
+		{/if}
+		{/foreach}
+	</div>
+
+
+	
+</div><!-- end .row -->
+
+{else}
+<h1>NON CI SONO frammenti</h1>
+{/if}
+<!-- MODIFICA QUESTELINEE-->
+
+</div>

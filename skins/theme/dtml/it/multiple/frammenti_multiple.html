@@ -1,0 +1,32 @@
+<div id="liveReport">
+	<!-- MODIFICA QUESTE LINEE-->
+{if $instances != null || $instance != null}
+
+<div class="container">
+
+		<div class="row">
+		<h2 style align="center" ><strong>HOT DEALS</strong></h2>
+			{foreach from=$instances item=instance}
+			{if $instance->titolo eq "DEALS"}
+			<div class="col-md-3 col-sm-6">
+			
+				<div class="dealimg view view-second">
+					<img src="data:{$instance->foto->filetype};base64,
+					{$instance->foto->data}" alt="{$instance->titolo}"/>			
+									</div>
+				{$instance->descrizione}
+			</div>
+			{else}
+			{/if}
+			{/foreach}
+		</div>
+	</div>
+		
+
+{else}
+<h1>NON CI SONO frammenti</h1>
+{/if}
+<!-- MODIFICA QUESTELINEE-->
+
+</div>
+

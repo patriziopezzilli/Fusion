@@ -1,0 +1,20 @@
+<div id="liveReport">
+	<!-- MODIFICA QUESTE LINEE-->
+SINGLE TEMPLATE STANDARD; <h1>frammenti</h1>
+{if $instances != null || $instance != null}
+<ul>
+<li>id: {$instance->id}</li>
+<li>owner: {$instance->owner->presentation}</li>
+<li>titolo: {$instance->titolo}</li>
+<li>descrizione: {$instance->descrizione}</li>
+<li>sottotitolo: {$instance->sottotitolo}</li>
+<li>id_sezione: {$instance->id_sezione->presentation}</li>
+</ul>
+{else}
+<h1>NON CI SONO frammenti</h1>
+{/if}
+
+<!-- MODIFICA QUESTE LINEE-->
+
+</div>
+

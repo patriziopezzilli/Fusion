@@ -1,0 +1,23 @@
+<div id="liveReport">
+
+{if $instances != null || $instance != null}
+
+			<div class="row puretext section s3" id="s3" style="margin:50px;">
+		    <h2>A FEW WORDS / <strong>INFORMAZIONI SUL RISTORANTE</strong></h2>
+			
+			{foreach from=$instances item=instance }
+			{if $instance->titolo eq "DESCRIZIONE"}
+				<div class="col-md-12" >
+					
+					{$instance->descrizione}
+					
+			
+				</div>
+				{else}
+				{/if}
+				
+			{/foreach}
+	</div>	
+	{else}
+	{/if}
+</div>

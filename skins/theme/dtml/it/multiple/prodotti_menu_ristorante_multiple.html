@@ -1,0 +1,61 @@
+<div id="liveReport">
+
+{if $instances != null || $instance != null}	
+
+<div class="row nomgbtm section s1" id="s1">
+				<div class="col-md-12">
+					<h2><strong>OUR MENU</strong></h2>
+				</div>
+			</div>
+			
+					
+<div class="accordion">
+	
+	
+	{foreach from=$instances->id_prodotti item=portata }
+
+	<h3>MENU / <strong>{$instance->id_prodotti->portata}</strong></h3>
+	
+	<div class="section">
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="item simpleCart_shelfItem" id="item-01">
+					<div class="info">
+						<div class="dots"></div>
+						<span class="name item_name">1. TARO SHRIMP</span>
+						<span class="price item_price">$ 8.50</span>
+					</div>
+					<div class="description">Shrimp wrapped in taro, deep fried and served with chili sauce</div>
+					<div class="legend"><span>SPICY</span><a class="add item_add" href="javascript:;">ADD</a></div>
+					<input type="hidden" value="1" class="item_Quantity">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="item simpleCart_shelfItem" id="item-02">
+					<div class="info">
+						<div class="dots"></div>
+						<span class="name item_name">2. MINI-ROLLS (6)</span>
+						<span class="price item_price">$ 5.95</span>
+					</div>
+					<div class="description">Fried spring rolls stuffed with vegetables and served with Thai spicy sauce</div>
+					<div class="legend"><span>VEG</span><span>SPICY</span><a class="add item_add" href="javascript:;">ADD</a></div>
+				</div>
+			</div>
+		</div><!-- end .row --> 
+		
+			</div><!-- end .section -->
+			{/foreach}
+			
+		
+			
+ 
+</div><!-- end .accordion -->
+
+{else}
+<h1>NON CI SONO PRODOTTI</h1>
+{/if}
+
+
+</div>
+

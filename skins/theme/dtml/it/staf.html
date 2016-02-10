@@ -1,0 +1,30 @@
+<div id="liveReport">
+
+{if $instances != null || $instance != null}
+
+
+<div class="row team section s2" id="s2">
+
+	<h2>THE TEAM / <strong>IL NOSTRO STAFF</strong></h2>
+	
+	{foreach from=$instances item=instance }
+	{if $instance->titolo eq "STAFF"}
+	<div class="col-md-3 col-sm-6 portrait text-center" style="margin-left:80px" style="margin-right:80px">
+		<img class="img-responsive center-block" src="data:{$instance->foto->filetype};base64,
+		{$instance->foto->data}" alt="" />
+		<h4>{$instance->sottotitolo}</h4>
+		{$instance->descrizione}
+		
+	</div>
+	{else}
+	{/if}
+	{/foreach}
+	
+	</div><!-- end .row -->
+{else}
+<h1>NON CI SONO frammenti</h1>
+{/if}
+<!-- MODIFICA QUESTELINEE-->
+
+</div>
+

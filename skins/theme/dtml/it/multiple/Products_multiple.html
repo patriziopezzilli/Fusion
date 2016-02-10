@@ -1,0 +1,19 @@
+<div id="liveReport">
+	<!-- MODIFICA QUESTE LINEE-->
+MULTIPLE TEMPLATE STANDARD; <h1>Products</h1>{if $instances != null || $instance != null}
+<ul>
+{foreach from=$instances item=instance}
+<li>id: {$instance->id}</li>
+<li>item_name: {$instance->item_name}</li>
+<li>tag: {$instance->tag}</li>
+<li>price: {$instance->price}</li>
+<li>id_categoriaristorante: {$instance->id_categoriaristorante->presentation}</li>
+{/foreach}
+</ul>
+{else}
+<h1>NON CI SONO Products</h1>
+{/if}
+<!-- MODIFICA QUESTELINEE-->
+
+</div>
+

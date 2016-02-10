@@ -1,0 +1,17 @@
+<div id="liveReport">
+	<!-- MODIFICA QUESTE LINEE-->
+SINGLE TEMPLATE STANDARD; <h1>prenotazioni_gestione_tavoli</h1>
+{if $instances != null || $instance != null}
+<ul>
+<li>id: {$instance->id}</li>
+<li>id_prenotazioni: {$instance->id_prenotazioni->presentation}</li>
+<li>id_gestione_tavoli: {$instance->id_gestione_tavoli->presentation}</li>
+</ul>
+{else}
+<h1>NON CI SONO prenotazioni_gestione_tavoli</h1>
+{/if}
+
+<!-- MODIFICA QUESTE LINEE-->
+
+</div>
+

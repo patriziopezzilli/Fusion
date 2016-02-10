@@ -1,0 +1,209 @@
+<div id="liveReport">
+
+{if $instances != null || $instance != null}	
+
+<div class="row nomgbtm section s1" id="s1">
+				<div class="col-md-12">
+					<h2>MENU /<a href="http://localhost:8888/fusion/skins/theme/images/fusionmenu.pdf" target=”_blank” title=”Link esterno, si apre in una nuova finestra”><strong> PDF</strong></a>
+					</h2>
+					
+				</div>
+		</div>
+	
+	
+	<!--{foreach from=$instances item=instance }
+	{if $instance->portata eq "ANTIPASTO"}
+	
+														
+					
+			{/if}
+			{/foreach} -->
+			
+		
+		<div class="accordion">
+							<h3>MENU / <strong>ANTIPASTI</strong></h3>
+							<div class="section">
+								<div class="row" >
+								{assign var=number value=0}
+								{foreach from=$instances item=instance }
+								
+								{if $instance->portata eq "ANTIPASTO"}
+								{assign var=number value=$number+1}
+									<div class="col-md-6">
+										<div class="item simpleCart_shelfItem" id="item-01">
+											<div class="info">
+												<div class="dots"></div>
+												<span class="name item_name">{$number}.{$instance->item_name}</span>
+												<span class="price item_price">{$instance->price}</span>
+											</div>
+											<div class="legend"><span>{$instance->tag}</span></div>
+											<input type="hidden" value="1" class="item_Quantity">
+										</div>
+																			
+									</div>
+									
+									{/if}
+									
+								
+									{/foreach}
+									
+										</div><!-- end .row -->
+									</div><!-- end .section -->
+		 
+							<h3>MENU / <strong>PRIMI</strong></h3>
+							<div class="section">
+								<div class="row">
+									{assign var=number value=0}
+									{foreach from=$instances item=instance }
+									
+									{if $instance->portata eq "PRIMO"}
+									{assign var=number value=$number+1}
+										<div class="col-md-6">
+											<div class="item simpleCart_shelfItem" id="item-01">
+												<div class="info">
+													<div class="dots"></div>
+													<span class="name item_name">{$number}.{$instance->item_name}</span>
+													<span class="price item_price">{$instance->price}</span>
+												</div>
+												<div class="legend"><span>{$instance->tag}</span></div>
+												<input type="hidden" value="1" class="item_Quantity">
+											</div>
+																				
+										</div>
+										
+										{/if}
+										
+									
+										{/foreach}
+																	</div><!-- end .row -->
+							</div><!-- end .section-->
+		 
+							<h3>MENU / <strong>SECONDI</strong></h3>
+							<div class="section">
+								<div class="row">
+									{assign var=number value=0}
+									{foreach from=$instances item=instance }
+									
+									{if $instance->portata eq "SECONDO"}
+									{assign var=number value=$number+1}
+										<div class="col-md-6">
+											<div class="item simpleCart_shelfItem" id="item-01">
+												<div class="info">
+													<div class="dots"></div>
+													<span class="name item_name">{$number}.{$instance->item_name}</span>
+													<span class="price item_price">{$instance->price}</span>
+												</div>
+												<div class="legend"><span>{$instance->tag}</span></div>
+												<input type="hidden" value="1" class="item_Quantity">
+											</div>
+																				
+										</div>
+										
+										{/if}
+										
+									
+										{/foreach}
+																</div><!-- end .row -->
+															</div><!-- end .section -->
+		 
+							<h3>MENU / <strong>CONTORNI</strong></h3>
+							<div class="section">
+								<div class="row">
+									{assign var=number value=0}
+									{foreach from=$instances item=instance }
+									
+									{if $instance->portata eq "CONTORNO"}
+									{assign var=number value=$number+1}
+										<div class="col-md-6">
+											<div class="item simpleCart_shelfItem" id="item-01">
+												<div class="info">
+													<div class="dots"></div>
+													<span class="name item_name">{$number}.{$instance->item_name}</span>
+													<span class="price item_price">{$instance->price}</span>
+												</div>
+												<div class="legend"><span>{$instance->tag}</span></div>
+												<input type="hidden" value="1" class="item_Quantity">
+											</div>
+																				
+										</div>
+										
+										{/if}
+										
+									
+										{/foreach}
+																		
+								</div><!-- end .row -->
+								
+							</div><!-- end .section -->
+		 
+							<h3>MENU / <strong>DOLCI</strong></h3>
+												<div class="section">
+													<div class="row">
+														{assign var=number value=0}
+														{foreach from=$instances item=instance }
+														
+														{if $instance->portata eq "DOLCE"}
+														{assign var=number value=$number+1}
+															<div class="col-md-6">
+																<div class="item simpleCart_shelfItem" id="item-01">
+																	<div class="info">
+																		<div class="dots"></div>
+																		<span class="name item_name">{$number}.{$instance->item_name}</span>
+																		<span class="price item_price">{$instance->price}</span>
+																	</div>
+																	<div class="legend"><span>{$instance->tag}</span></div>
+																	<input type="hidden" value="1" class="item_Quantity">
+																</div>
+																									
+															</div>
+															
+															{/if}
+															
+														
+															{/foreach}
+														
+																											</div><!-- end .row -->
+													
+												</div><!-- end .section -->
+												
+							<h3>MENU / <strong>BEVANDE</strong></h3>
+							<div class="section">
+								<div class="row">
+									{assign var=number value=0}
+									{foreach from=$instances item=instance }
+									
+									{if $instance->portata eq "BEVANDA"}
+									{assign var=number value=$number+1}
+										<div class="col-md-6">
+											<div class="item simpleCart_shelfItem" id="item-01">
+												<div class="info">
+													<div class="dots"></div>
+													<span class="name item_name">{$number}.{$instance->item_name}</span>
+													<span class="price item_price">{$instance->price}</span>
+												</div>
+												<div class="legend"><span>{$instance->tag}</span></div>
+												<input type="hidden" value="1" class="item_Quantity">
+											</div>
+																				
+										</div>
+										
+										{/if}
+										
+									
+										{/foreach}
+																										</div><!-- end .row -->
+							
+							</div><!-- end .section -->
+						</div><!-- end .accordion -->
+		 
+		
+		 
+	
+
+{else}
+<h1>NON CI SONO PRODOTTI</h1>
+{/if}
+
+
+
+
